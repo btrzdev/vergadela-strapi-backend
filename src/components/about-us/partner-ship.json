@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_about_us_partner_ships",
+  "info": {
+    "displayName": "partnerShip"
+  },
+  "options": {},
+  "attributes": {
+    "href": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_about_us_recents_projects",
+  "info": {
+    "displayName": "recentsProjects"
+  },
+  "options": {},
+  "attributes": {
+    "project": {
+      "displayName": "project",
+      "type": "component",
+      "repeatable": true,
+      "component": "project.project"
+    }
+  }
+}

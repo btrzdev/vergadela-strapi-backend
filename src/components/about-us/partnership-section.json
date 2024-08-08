@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_about_us_partnership_sections",
+  "info": {
+    "displayName": "partnershipSection"
+  },
+  "options": {},
+  "attributes": {
+    "partinership": {
+      "type": "component",
+      "repeatable": true,
+      "component": "about-us.partner-ship"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_about_us_curiosity_sections",
+  "info": {
+    "displayName": "curiositySection"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "curiosity": {
+      "displayName": "curiosity",
+      "type": "component",
+      "repeatable": true,
+      "component": "about-us.curiosity"
+    }
+  }
+}
