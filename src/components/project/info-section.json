@@ -1,0 +1,58 @@
+{
+  "collectionName": "components_project_info_sections",
+  "info": {
+    "displayName": "infoSection"
+  },
+  "options": {},
+  "attributes": {
+    "location": {
+      "type": "string"
+    },
+    "team": {
+      "type": "string"
+    },
+    "client": {
+      "type": "string"
+    },
+    "terms": {
+      "type": "string"
+    },
+    "strategy": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "services": {
+      "type": "string"
+    },
+    "socialMedia": {
+      "displayName": "socialMedia",
+      "type": "component",
+      "repeatable": true,
+      "component": "project.social-media"
+    },
+    "carrouselImages": {
+      "displayName": "carrouselImages",
+      "type": "component",
+      "repeatable": false,
+      "component": "project.carrousel-images"
+    },
+    "bigImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "details": {
+      "displayName": "details",
+      "type": "component",
+      "repeatable": true,
+      "component": "project.details"
+    }
+  }
+}

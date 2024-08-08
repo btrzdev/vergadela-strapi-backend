@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_project_social_medias",
+  "info": {
+    "displayName": "socialMedia"
+  },
+  "options": {},
+  "attributes": {
+    "links": {
+      "type": "string"
+    }
+  }
+}

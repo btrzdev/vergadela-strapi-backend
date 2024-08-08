@@ -33,6 +33,27 @@ export interface ServicesService extends Schema.Component {
   };
 }
 
+export interface ProjectSocialMedia extends Schema.Component {
+  collectionName: 'components_project_social_medias';
+  info: {
+    displayName: 'socialMedia';
+  };
+  attributes: {
+    links: Attribute.String;
+  };
+}
+
+export interface ProjectProjectsRelations extends Schema.Component {
+  collectionName: 'components_project_projects_relations';
+  info: {
+    displayName: 'projectsRelations';
+  };
+  attributes: {
+    title: Attribute.String;
+    subtitle: Attribute.String;
+  };
+}
+
 export interface ProjectProject extends Schema.Component {
   collectionName: 'components_project_projects';
   info: {
@@ -42,6 +63,70 @@ export interface ProjectProject extends Schema.Component {
     title: Attribute.String;
     image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     type: Attribute.String;
+  };
+}
+
+export interface ProjectInfoSection extends Schema.Component {
+  collectionName: 'components_project_info_sections';
+  info: {
+    displayName: 'infoSection';
+  };
+  attributes: {
+    location: Attribute.String;
+    team: Attribute.String;
+    client: Attribute.String;
+    terms: Attribute.String;
+    strategy: Attribute.String;
+    date: Attribute.String;
+    services: Attribute.String;
+    socialMedia: Attribute.Component<'project.social-media', true>;
+    carrouselImages: Attribute.Component<'project.carrousel-images'>;
+    bigImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    details: Attribute.Component<'project.details', true>;
+  };
+}
+
+export interface ProjectHero extends Schema.Component {
+  collectionName: 'components_project_heroes';
+  info: {
+    displayName: 'hero';
+  };
+  attributes: {
+    title: Attribute.String;
+    subtitle: Attribute.String;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface ProjectDetails extends Schema.Component {
+  collectionName: 'components_project_details';
+  info: {
+    displayName: 'details';
+  };
+  attributes: {
+    title: Attribute.String;
+    content: Attribute.Text;
+  };
+}
+
+export interface ProjectCarrouselImages extends Schema.Component {
+  collectionName: 'components_project_carrousel_images';
+  info: {
+    displayName: 'carrouselImages';
+  };
+  attributes: {
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+  };
+}
+
+export interface NewsPreviewNews extends Schema.Component {
+  collectionName: 'components_news_preview_news';
+  info: {
+    displayName: 'previewNews';
+  };
+  attributes: {
+    title: Attribute.String;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -154,7 +239,14 @@ declare module '@strapi/types' {
       'team.team-section': TeamTeamSection;
       'team.team-member': TeamTeamMember;
       'services.service': ServicesService;
+      'project.social-media': ProjectSocialMedia;
+      'project.projects-relations': ProjectProjectsRelations;
       'project.project': ProjectProject;
+      'project.info-section': ProjectInfoSection;
+      'project.hero': ProjectHero;
+      'project.details': ProjectDetails;
+      'project.carrousel-images': ProjectCarrouselImages;
+      'news.preview-news': NewsPreviewNews;
       'general.link': GeneralLink;
       'about-us.services-section': AboutUsServicesSection;
       'about-us.recents-projects': AboutUsRecentsProjects;
