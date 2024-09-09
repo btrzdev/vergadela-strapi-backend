@@ -1,7 +1,8 @@
 {
   "collectionName": "components_project_projects",
   "info": {
-    "displayName": "project"
+    "displayName": "project",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -9,6 +10,41 @@
       "type": "string"
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "type": {
+      "type": "string"
+    },
+    "local": {
+      "type": "string"
+    },
+    "team": {
+      "type": "string"
+    },
+    "strategy": {
+      "type": "string"
+    },
+    "client": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "terms": {
+      "type": "string"
+    },
+    "services": {
+      "type": "string"
+    },
+    "gallery": {
       "allowedTypes": [
         "images",
         "files",
@@ -16,10 +52,13 @@
         "audios"
       ],
       "type": "media",
-      "multiple": false
+      "multiple": true
     },
-    "type": {
-      "type": "string"
+    "details": {
+      "type": "text"
+    },
+    "concept": {
+      "type": "text"
     }
   }
 }

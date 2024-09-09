@@ -26,10 +26,13 @@ export interface ServicesService extends Schema.Component {
   collectionName: 'components_services_services';
   info: {
     displayName: 'service';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    subtitle: Attribute.String;
+    content: Attribute.RichText;
   };
 }
 
@@ -58,11 +61,22 @@ export interface ProjectProject extends Schema.Component {
   collectionName: 'components_project_projects';
   info: {
     displayName: 'project';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     type: Attribute.String;
+    local: Attribute.String;
+    team: Attribute.String;
+    strategy: Attribute.String;
+    client: Attribute.String;
+    date: Attribute.String;
+    terms: Attribute.String;
+    services: Attribute.String;
+    gallery: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    details: Attribute.Text;
+    concept: Attribute.Text;
   };
 }
 
