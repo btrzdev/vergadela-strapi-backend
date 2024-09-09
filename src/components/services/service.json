@@ -25,6 +25,22 @@
     },
     "content": {
       "type": "richtext"
+    },
+    "imgPageCover": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "pageTitle": {
+      "type": "string"
+    },
+    "pageSubtitle": {
+      "type": "string"
     }
   }
 }

@@ -891,6 +891,7 @@ export interface ApiServiceService extends Schema.CollectionType {
     singularName: 'service';
     pluralName: 'services';
     displayName: 'Services';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -899,6 +900,7 @@ export interface ApiServiceService extends Schema.CollectionType {
     title: Attribute.String;
     subtitle: Attribute.String;
     content: Attribute.RichText;
+    imgCover: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

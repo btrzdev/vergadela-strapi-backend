@@ -33,6 +33,9 @@ export interface ServicesService extends Schema.Component {
     image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     subtitle: Attribute.String;
     content: Attribute.RichText;
+    imgPageCover: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    pageTitle: Attribute.String;
+    pageSubtitle: Attribute.String;
   };
 }
 
