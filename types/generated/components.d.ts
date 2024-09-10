@@ -87,6 +87,7 @@ export interface ProjectInfoSection extends Schema.Component {
   collectionName: 'components_project_info_sections';
   info: {
     displayName: 'infoSection';
+    description: '';
   };
   attributes: {
     location: Attribute.String;
@@ -98,7 +99,6 @@ export interface ProjectInfoSection extends Schema.Component {
     services: Attribute.String;
     socialMedia: Attribute.Component<'project.social-media', true>;
     carrouselImages: Attribute.Component<'project.carrousel-images'>;
-    bigImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     details: Attribute.Component<'project.details', true>;
   };
 }

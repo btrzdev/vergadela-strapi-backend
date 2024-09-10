@@ -1,7 +1,8 @@
 {
   "collectionName": "components_project_info_sections",
   "info": {
-    "displayName": "infoSection"
+    "displayName": "infoSection",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -37,16 +38,6 @@
       "type": "component",
       "repeatable": false,
       "component": "project.carrousel-images"
-    },
-    "bigImage": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false
     },
     "details": {
       "displayName": "details",

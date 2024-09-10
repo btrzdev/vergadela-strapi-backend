@@ -859,14 +859,16 @@ export interface ApiProjectProject extends Schema.CollectionType {
     singularName: 'project';
     pluralName: 'projects';
     displayName: 'Project';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     hero: Attribute.Component<'project.hero'>;
-    infoSection: Attribute.Component<'project.info-section', true>;
+    infoSection: Attribute.Component<'project.info-section'>;
     projectsRelations: Attribute.Component<'project.projects-relations'>;
+    type: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "project",
     "pluralName": "projects",
-    "displayName": "Project"
+    "displayName": "Project",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,7 +20,7 @@
     },
     "infoSection": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "project.info-section"
     },
     "projectsRelations": {
@@ -27,6 +28,9 @@
       "type": "component",
       "repeatable": false,
       "component": "project.projects-relations"
+    },
+    "type": {
+      "type": "string"
     }
   }
 }
