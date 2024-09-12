@@ -1,31 +1,16 @@
 {
   "collectionName": "components_about_us_chronologies",
   "info": {
-    "displayName": "chronology"
+    "displayName": "chronology",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "year": {
-      "type": "string"
-    },
-    "description": {
-      "type": "string"
-    },
-    "image": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false
-    },
-    "title": {
-      "type": "string"
-    },
-    "subtitle": {
-      "type": "string"
+    "items": {
+      "displayName": "chronos",
+      "type": "component",
+      "repeatable": true,
+      "component": "about-us.chronos"
     }
   }
 }

@@ -1,15 +1,15 @@
 {
   "collectionName": "components_project_projects_relations",
   "info": {
-    "displayName": "projectsRelations"
+    "displayName": "projectsRelations",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "title": {
-      "type": "string"
-    },
-    "subtitle": {
-      "type": "string"
+    "projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project"
     }
   }
 }

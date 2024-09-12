@@ -1,5 +1,22 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface ServicesService extends Schema.Component {
+  collectionName: 'components_services_services';
+  info: {
+    displayName: 'service';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    subtitle: Attribute.String;
+    content: Attribute.RichText;
+    imgPageCover: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    pageTitle: Attribute.String;
+    pageSubtitle: Attribute.String;
+  };
+}
+
 export interface TeamTeamSection extends Schema.Component {
   collectionName: 'components_team_team_sections';
   info: {
@@ -22,23 +39,6 @@ export interface TeamTeamMember extends Schema.Component {
   };
 }
 
-export interface ServicesService extends Schema.Component {
-  collectionName: 'components_services_services';
-  info: {
-    displayName: 'service';
-    description: '';
-  };
-  attributes: {
-    title: Attribute.String;
-    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    subtitle: Attribute.String;
-    content: Attribute.RichText;
-    imgPageCover: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    pageTitle: Attribute.String;
-    pageSubtitle: Attribute.String;
-  };
-}
-
 export interface ProjectSocialMedia extends Schema.Component {
   collectionName: 'components_project_social_medias';
   info: {
@@ -53,10 +53,14 @@ export interface ProjectProjectsRelations extends Schema.Component {
   collectionName: 'components_project_projects_relations';
   info: {
     displayName: 'projectsRelations';
+    description: '';
   };
   attributes: {
-    title: Attribute.String;
-    subtitle: Attribute.String;
+    projects: Attribute.Relation<
+      'project.projects-relations',
+      'oneToMany',
+      'api::project.project'
+    >;
   };
 }
 
@@ -236,26 +240,37 @@ export interface AboutUsCuriositySection extends Schema.Component {
   };
 }
 
-export interface AboutUsChronology extends Schema.Component {
-  collectionName: 'components_about_us_chronologies';
+export interface AboutUsChronos extends Schema.Component {
+  collectionName: 'components_about_us_chronos';
   info: {
-    displayName: 'chronology';
+    displayName: 'chronos';
   };
   attributes: {
     year: Attribute.String;
-    description: Attribute.String;
+    description: Attribute.Text;
     image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Attribute.String;
     subtitle: Attribute.String;
   };
 }
 
+export interface AboutUsChronology extends Schema.Component {
+  collectionName: 'components_about_us_chronologies';
+  info: {
+    displayName: 'chronology';
+    description: '';
+  };
+  attributes: {
+    items: Attribute.Component<'about-us.chronos', true>;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'services.service': ServicesService;
       'team.team-section': TeamTeamSection;
       'team.team-member': TeamTeamMember;
-      'services.service': ServicesService;
       'project.social-media': ProjectSocialMedia;
       'project.projects-relations': ProjectProjectsRelations;
       'project.project': ProjectProject;
@@ -272,6 +287,7 @@ declare module '@strapi/types' {
       'about-us.hero': AboutUsHero;
       'about-us.curiosity': AboutUsCuriosity;
       'about-us.curiosity-section': AboutUsCuriositySection;
+      'about-us.chronos': AboutUsChronos;
       'about-us.chronology': AboutUsChronology;
     }
   }
