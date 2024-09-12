@@ -1,7 +1,8 @@
 {
   "collectionName": "components_team_team_members",
   "info": {
-    "displayName": "teamMember"
+    "displayName": "teamMember",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -12,7 +13,14 @@
       "type": "string"
     },
     "picture": {
-      "type": "string"
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

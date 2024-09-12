@@ -1,22 +1,5 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
-export interface ServicesService extends Schema.Component {
-  collectionName: 'components_services_services';
-  info: {
-    displayName: 'service';
-    description: '';
-  };
-  attributes: {
-    title: Attribute.String;
-    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    subtitle: Attribute.String;
-    content: Attribute.RichText;
-    imgPageCover: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    pageTitle: Attribute.String;
-    pageSubtitle: Attribute.String;
-  };
-}
-
 export interface TeamTeamSection extends Schema.Component {
   collectionName: 'components_team_team_sections';
   info: {
@@ -31,11 +14,29 @@ export interface TeamTeamMember extends Schema.Component {
   collectionName: 'components_team_team_members';
   info: {
     displayName: 'teamMember';
+    description: '';
   };
   attributes: {
     name: Attribute.String;
     role: Attribute.String;
-    picture: Attribute.String;
+    picture: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface ServicesService extends Schema.Component {
+  collectionName: 'components_services_services';
+  info: {
+    displayName: 'service';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    subtitle: Attribute.String;
+    content: Attribute.RichText;
+    imgPageCover: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    pageTitle: Attribute.String;
+    pageSubtitle: Attribute.String;
   };
 }
 
@@ -268,9 +269,9 @@ export interface AboutUsChronology extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
-      'services.service': ServicesService;
       'team.team-section': TeamTeamSection;
       'team.team-member': TeamTeamMember;
+      'services.service': ServicesService;
       'project.social-media': ProjectSocialMedia;
       'project.projects-relations': ProjectProjectsRelations;
       'project.project': ProjectProject;
