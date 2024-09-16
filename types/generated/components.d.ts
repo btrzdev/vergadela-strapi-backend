@@ -40,6 +40,29 @@ export interface ServicesService extends Schema.Component {
   };
 }
 
+export interface NewsPreviewNews extends Schema.Component {
+  collectionName: 'components_news_preview_news';
+  info: {
+    displayName: 'previewNews';
+  };
+  attributes: {
+    title: Attribute.String;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface NewsHero extends Schema.Component {
+  collectionName: 'components_news_heroes';
+  info: {
+    displayName: 'hero';
+  };
+  attributes: {
+    title: Attribute.String;
+    subtitle: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
 export interface ProjectSocialMedia extends Schema.Component {
   collectionName: 'components_project_social_medias';
   info: {
@@ -141,14 +164,30 @@ export interface ProjectCarrouselImages extends Schema.Component {
   };
 }
 
-export interface NewsPreviewNews extends Schema.Component {
-  collectionName: 'components_news_preview_news';
+export interface ProjectCardtype extends Schema.Component {
+  collectionName: 'components_project_cardtypes';
   info: {
-    displayName: 'previewNews';
+    displayName: 'cardtype';
   };
   attributes: {
-    title: Attribute.String;
-    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    type: Attribute.String;
+    imageCard: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    typeProject: Attribute.Enumeration<
+      ['apartamentos', 'moradias', 'corporativo']
+    >;
+  };
+}
+
+export interface ProjectCards extends Schema.Component {
+  collectionName: 'components_project_cards';
+  info: {
+    displayName: 'cards';
+  };
+  attributes: {
+    imgCard: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    typeProject: Attribute.Enumeration<
+      ['apartamentos', 'moradias', 'corporativo']
+    >;
   };
 }
 
@@ -277,6 +316,8 @@ declare module '@strapi/types' {
       'team.team-section': TeamTeamSection;
       'team.team-member': TeamTeamMember;
       'services.service': ServicesService;
+      'news.preview-news': NewsPreviewNews;
+      'news.hero': NewsHero;
       'project.social-media': ProjectSocialMedia;
       'project.projects-relations': ProjectProjectsRelations;
       'project.project': ProjectProject;
@@ -284,7 +325,8 @@ declare module '@strapi/types' {
       'project.hero': ProjectHero;
       'project.details': ProjectDetails;
       'project.carrousel-images': ProjectCarrouselImages;
-      'news.preview-news': NewsPreviewNews;
+      'project.cardtype': ProjectCardtype;
+      'project.cards': ProjectCards;
       'general.link': GeneralLink;
       'about-us.services-section': AboutUsServicesSection;
       'about-us.recents-projects': AboutUsRecentsProjects;

@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "project_types_pages",
+  "info": {
+    "singularName": "project-types-page",
+    "pluralName": "project-types-pages",
+    "displayName": "ProjectTypesPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cardType": {
+      "displayName": "cards",
+      "type": "component",
+      "repeatable": true,
+      "component": "project.cards"
+    }
+  }
+}
