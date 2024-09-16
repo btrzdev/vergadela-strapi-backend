@@ -7,6 +7,7 @@ export default ({ env }) => ({
       jwt: {
         jwtSecret: env('JWT_SECRET') || crypto.randomBytes(16).toString('base64')
       },
+      defaultDepth: 5
     },
   },
 });

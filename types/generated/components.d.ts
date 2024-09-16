@@ -178,9 +178,14 @@ export interface AboutUsRecentsProjects extends Schema.Component {
   collectionName: 'components_about_us_recents_projects';
   info: {
     displayName: 'recentsProjects';
+    description: '';
   };
   attributes: {
-    project: Attribute.Component<'project.project', true>;
+    projects: Attribute.Relation<
+      'about-us.recents-projects',
+      'oneToMany',
+      'api::project.project'
+    >;
   };
 }
 

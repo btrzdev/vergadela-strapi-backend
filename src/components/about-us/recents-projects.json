@@ -1,15 +1,15 @@
 {
   "collectionName": "components_about_us_recents_projects",
   "info": {
-    "displayName": "recentsProjects"
+    "displayName": "recentsProjects",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "project": {
-      "displayName": "project",
-      "type": "component",
-      "repeatable": true,
-      "component": "project.project"
+    "projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project"
     }
   }
 }
