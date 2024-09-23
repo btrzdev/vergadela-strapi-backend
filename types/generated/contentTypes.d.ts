@@ -930,14 +930,15 @@ export interface ApiProjectTypeProjectType extends Schema.CollectionType {
     singularName: 'project-type';
     pluralName: 'project-types';
     displayName: 'ProjectTypes';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    projectType: Attribute.Relation<
+    project_types: Attribute.Relation<
       'api::project-type.project-type',
-      'oneToOne',
+      'oneToMany',
       'api::project.project'
     >;
     cardImg: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
