@@ -40,29 +40,6 @@ export interface ServicesService extends Schema.Component {
   };
 }
 
-export interface NewsPreviewNews extends Schema.Component {
-  collectionName: 'components_news_preview_news';
-  info: {
-    displayName: 'previewNews';
-  };
-  attributes: {
-    title: Attribute.String;
-    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-  };
-}
-
-export interface NewsHero extends Schema.Component {
-  collectionName: 'components_news_heroes';
-  info: {
-    displayName: 'hero';
-  };
-  attributes: {
-    title: Attribute.String;
-    subtitle: Attribute.String;
-    description: Attribute.Text;
-  };
-}
-
 export interface ProjectSocialMedia extends Schema.Component {
   collectionName: 'components_project_social_medias';
   info: {
@@ -191,6 +168,29 @@ export interface ProjectCards extends Schema.Component {
   };
 }
 
+export interface NewsPreviewNews extends Schema.Component {
+  collectionName: 'components_news_preview_news';
+  info: {
+    displayName: 'previewNews';
+  };
+  attributes: {
+    title: Attribute.String;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface NewsHero extends Schema.Component {
+  collectionName: 'components_news_heroes';
+  info: {
+    displayName: 'hero';
+  };
+  attributes: {
+    title: Attribute.String;
+    subtitle: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
 export interface GeneralLink extends Schema.Component {
   collectionName: 'components_general_links';
   info: {
@@ -316,8 +316,6 @@ declare module '@strapi/types' {
       'team.team-section': TeamTeamSection;
       'team.team-member': TeamTeamMember;
       'services.service': ServicesService;
-      'news.preview-news': NewsPreviewNews;
-      'news.hero': NewsHero;
       'project.social-media': ProjectSocialMedia;
       'project.projects-relations': ProjectProjectsRelations;
       'project.project': ProjectProject;
@@ -327,6 +325,8 @@ declare module '@strapi/types' {
       'project.carrousel-images': ProjectCarrouselImages;
       'project.cardtype': ProjectCardtype;
       'project.cards': ProjectCards;
+      'news.preview-news': NewsPreviewNews;
+      'news.hero': NewsHero;
       'general.link': GeneralLink;
       'about-us.services-section': AboutUsServicesSection;
       'about-us.recents-projects': AboutUsRecentsProjects;

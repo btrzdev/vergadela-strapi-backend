@@ -924,6 +924,44 @@ export interface ApiProjectProject extends Schema.CollectionType {
   };
 }
 
+export interface ApiProjectTypeProjectType extends Schema.CollectionType {
+  collectionName: 'project_types';
+  info: {
+    singularName: 'project-type';
+    pluralName: 'project-types';
+    displayName: 'ProjectTypes';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    projectType: Attribute.Relation<
+      'api::project-type.project-type',
+      'oneToOne',
+      'api::project.project'
+    >;
+    cardImg: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    type: Attribute.Enumeration<
+      ['interiores', 'projetos 3d', 'remodela\u00E7\u00E3o']
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::project-type.project-type',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::project-type.project-type',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiProjectTypesPageProjectTypesPage extends Schema.SingleType {
   collectionName: 'project_types_pages';
   info: {
@@ -1050,6 +1088,7 @@ declare module '@strapi/types' {
       'api::new.new': ApiNewNew;
       'api::news-page.news-page': ApiNewsPageNewsPage;
       'api::project.project': ApiProjectProject;
+      'api::project-type.project-type': ApiProjectTypeProjectType;
       'api::project-types-page.project-types-page': ApiProjectTypesPageProjectTypesPage;
       'api::service.service': ApiServiceService;
       'api::services-page.services-page': ApiServicesPageServicesPage;
