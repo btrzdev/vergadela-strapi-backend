@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_about_us_block_quote1s",
+  "info": {
+    "displayName": "blockQuote1"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "info1": {
+      "type": "string"
+    },
+    "subinfo1": {
+      "type": "string"
+    },
+    "info2": {
+      "type": "string"
+    },
+    "subinfo2": {
+      "type": "string"
+    },
+    "info3": {
+      "type": "string"
+    },
+    "subinfo3": {
+      "type": "string"
+    },
+    "info4": {
+      "type": "string"
+    },
+    "subinfo4": {
+      "type": "string"
+    }
+  }
+}

@@ -40,6 +40,29 @@ export interface ServicesService extends Schema.Component {
   };
 }
 
+export interface NewsPreviewNews extends Schema.Component {
+  collectionName: 'components_news_preview_news';
+  info: {
+    displayName: 'previewNews';
+  };
+  attributes: {
+    title: Attribute.String;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface NewsHero extends Schema.Component {
+  collectionName: 'components_news_heroes';
+  info: {
+    displayName: 'hero';
+  };
+  attributes: {
+    title: Attribute.String;
+    subtitle: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
 export interface ProjectSocialMedia extends Schema.Component {
   collectionName: 'components_project_social_medias';
   info: {
@@ -168,29 +191,6 @@ export interface ProjectCards extends Schema.Component {
   };
 }
 
-export interface NewsPreviewNews extends Schema.Component {
-  collectionName: 'components_news_preview_news';
-  info: {
-    displayName: 'previewNews';
-  };
-  attributes: {
-    title: Attribute.String;
-    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-  };
-}
-
-export interface NewsHero extends Schema.Component {
-  collectionName: 'components_news_heroes';
-  info: {
-    displayName: 'hero';
-  };
-  attributes: {
-    title: Attribute.String;
-    subtitle: Attribute.String;
-    description: Attribute.Text;
-  };
-}
-
 export interface GeneralLink extends Schema.Component {
   collectionName: 'components_general_links';
   info: {
@@ -253,12 +253,13 @@ export interface AboutUsHero extends Schema.Component {
   collectionName: 'components_about_us_heroes';
   info: {
     displayName: 'hero';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     subtitle: Attribute.String;
     description: Attribute.String;
-    link: Attribute.Component<'general.link'>;
+    blockQuote1: Attribute.Component<'about-us.block-quote1'>;
   };
 }
 
@@ -310,12 +311,44 @@ export interface AboutUsChronology extends Schema.Component {
   };
 }
 
+export interface AboutUsBlockQuote2 extends Schema.Component {
+  collectionName: 'components_about_us_block_quote2s';
+  info: {
+    displayName: 'blockQuote2';
+  };
+  attributes: {
+    title: Attribute.Text;
+    description: Attribute.Text;
+  };
+}
+
+export interface AboutUsBlockQuote1 extends Schema.Component {
+  collectionName: 'components_about_us_block_quote1s';
+  info: {
+    displayName: 'blockQuote1';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    info1: Attribute.String;
+    subinfo1: Attribute.String;
+    info2: Attribute.String;
+    subinfo2: Attribute.String;
+    info3: Attribute.String;
+    subinfo3: Attribute.String;
+    info4: Attribute.String;
+    subinfo4: Attribute.String;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'team.team-section': TeamTeamSection;
       'team.team-member': TeamTeamMember;
       'services.service': ServicesService;
+      'news.preview-news': NewsPreviewNews;
+      'news.hero': NewsHero;
       'project.social-media': ProjectSocialMedia;
       'project.projects-relations': ProjectProjectsRelations;
       'project.project': ProjectProject;
@@ -325,8 +358,6 @@ declare module '@strapi/types' {
       'project.carrousel-images': ProjectCarrouselImages;
       'project.cardtype': ProjectCardtype;
       'project.cards': ProjectCards;
-      'news.preview-news': NewsPreviewNews;
-      'news.hero': NewsHero;
       'general.link': GeneralLink;
       'about-us.services-section': AboutUsServicesSection;
       'about-us.recents-projects': AboutUsRecentsProjects;
@@ -337,6 +368,8 @@ declare module '@strapi/types' {
       'about-us.curiosity-section': AboutUsCuriositySection;
       'about-us.chronos': AboutUsChronos;
       'about-us.chronology': AboutUsChronology;
+      'about-us.block-quote2': AboutUsBlockQuote2;
+      'about-us.block-quote1': AboutUsBlockQuote1;
     }
   }
 }

@@ -17,17 +17,6 @@
       "repeatable": false,
       "component": "about-us.hero"
     },
-    "video": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
     "chronology": {
       "displayName": "chronology",
       "type": "component",
@@ -63,6 +52,15 @@
       "type": "component",
       "repeatable": false,
       "component": "about-us.partnership-section"
+    },
+    "videoUrl": {
+      "type": "text"
+    },
+    "blockQuote2": {
+      "displayName": "blockQuote2",
+      "type": "component",
+      "repeatable": false,
+      "component": "about-us.block-quote2"
     }
   }
 }

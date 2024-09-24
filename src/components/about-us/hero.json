@@ -1,7 +1,8 @@
 {
   "collectionName": "components_about_us_heroes",
   "info": {
-    "displayName": "hero"
+    "displayName": "hero",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -14,11 +15,11 @@
     "description": {
       "type": "string"
     },
-    "link": {
-      "displayName": "link",
+    "blockQuote1": {
+      "displayName": "blockQuote1",
       "type": "component",
       "repeatable": false,
-      "component": "general.link"
+      "component": "about-us.block-quote1"
     }
   }
 }

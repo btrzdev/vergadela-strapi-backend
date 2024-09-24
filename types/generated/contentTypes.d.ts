@@ -801,13 +801,14 @@ export interface ApiAboutUsAboutUs extends Schema.SingleType {
   };
   attributes: {
     hero: Attribute.Component<'about-us.hero'>;
-    video: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     chronology: Attribute.Component<'about-us.chronology'>;
     servicesSection: Attribute.Component<'about-us.services-section'>;
     team: Attribute.Component<'team.team-section'>;
     recentsProjects: Attribute.Component<'about-us.recents-projects'>;
     curiositySection: Attribute.Component<'about-us.curiosity-section'>;
     partinershipSection: Attribute.Component<'about-us.partnership-section'>;
+    videoUrl: Attribute.Text;
+    blockQuote2: Attribute.Component<'about-us.block-quote2'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

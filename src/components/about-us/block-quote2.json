@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_about_us_block_quote2s",
+  "info": {
+    "displayName": "blockQuote2"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
