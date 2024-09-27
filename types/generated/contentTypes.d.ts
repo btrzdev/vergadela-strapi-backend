@@ -827,6 +827,46 @@ export interface ApiAboutUsAboutUs extends Schema.SingleType {
   };
 }
 
+export interface ApiFooterFooter extends Schema.SingleType {
+  collectionName: 'footers';
+  info: {
+    singularName: 'footer';
+    pluralName: 'footers';
+    displayName: 'Footer';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    phone: Attribute.String;
+    email: Attribute.String;
+    address: Attribute.String;
+    instagram_link: Attribute.String;
+    facebook_link: Attribute.String;
+    week_days: Attribute.String;
+    schedule_week_days: Attribute.String;
+    weekend_days: Attribute.String;
+    schedule_weekend_days: Attribute.String;
+    online_store_link: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::footer.footer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::footer.footer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiNewNew extends Schema.CollectionType {
   collectionName: 'news';
   info: {
@@ -1087,6 +1127,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
       'api::about-us.about-us': ApiAboutUsAboutUs;
+      'api::footer.footer': ApiFooterFooter;
       'api::new.new': ApiNewNew;
       'api::news-page.news-page': ApiNewsPageNewsPage;
       'api::project.project': ApiProjectProject;

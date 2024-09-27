@@ -20,6 +20,16 @@
       "type": "component",
       "repeatable": false,
       "component": "about-us.block-quote1"
+    },
+    "imageCover": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
