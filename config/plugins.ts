@@ -7,7 +7,13 @@ export default ({ env }) => ({
       jwt: {
         jwtSecret: env('JWT_SECRET') || crypto.randomBytes(16).toString('base64')
       },
-      defaultDepth: 5
+      sizeLimit: 250 * 1024 * 1024, 
+      defaultDepth: 5,
+      providerOptions: {
+        localServer: {
+          maxage: 300000
+        },
+      },
     },
   },
 });
