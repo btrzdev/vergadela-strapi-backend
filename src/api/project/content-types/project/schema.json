@@ -31,6 +31,9 @@
     },
     "type": {
       "type": "string"
+    },
+    "subcategory": {
+      "type": "string"
     }
   }
 }

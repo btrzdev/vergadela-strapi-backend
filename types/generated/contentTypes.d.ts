@@ -947,6 +947,7 @@ export interface ApiProjectProject extends Schema.CollectionType {
     infoSection: Attribute.Component<'project.info-section'>;
     projectsRelations: Attribute.Component<'project.projects-relations'>;
     type: Attribute.String;
+    subcategory: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
