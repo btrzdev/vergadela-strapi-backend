@@ -31,20 +31,21 @@
     "type": {
       "type": "enumeration",
       "enum": [
-        "interiores",
-        "projetos 3d",
-        "remodelação"
+        "apartamentos",
+        "moradias",
+        "corporativo"
       ]
     },
     "heroCoverImg": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     }
   }
 }

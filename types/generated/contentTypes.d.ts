@@ -984,9 +984,7 @@ export interface ApiProjectTypeProjectType extends Schema.CollectionType {
       'api::project.project'
     >;
     cardImg: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    type: Attribute.Enumeration<
-      ['interiores', 'projetos 3d', 'remodela\u00E7\u00E3o']
-    >;
+    type: Attribute.Enumeration<['apartamentos', 'moradias', 'corporativo']>;
     heroCoverImg: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
