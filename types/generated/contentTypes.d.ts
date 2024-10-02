@@ -946,7 +946,7 @@ export interface ApiProjectProject extends Schema.CollectionType {
     hero: Attribute.Component<'project.hero'>;
     infoSection: Attribute.Component<'project.info-section'>;
     projectsRelations: Attribute.Component<'project.projects-relations'>;
-    type: Attribute.String;
+    type: Attribute.Enumeration<['apartamentos', 'moradias', 'corporativo']>;
     subcategory: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -987,6 +987,7 @@ export interface ApiProjectTypeProjectType extends Schema.CollectionType {
     type: Attribute.Enumeration<
       ['interiores', 'projetos 3d', 'remodela\u00E7\u00E3o']
     >;
+    heroCoverImg: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -30,7 +30,12 @@
       "component": "project.projects-relations"
     },
     "type": {
-      "type": "string"
+      "type": "enumeration",
+      "enum": [
+        "apartamentos",
+        "moradias",
+        "corporativo"
+      ]
     },
     "subcategory": {
       "type": "string"
