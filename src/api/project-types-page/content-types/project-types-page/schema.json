@@ -4,7 +4,8 @@
   "info": {
     "singularName": "project-types-page",
     "pluralName": "project-types-pages",
-    "displayName": "ProjectTypesPage"
+    "displayName": "ProjectTypesPage",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -24,7 +25,8 @@
       "displayName": "cards",
       "type": "component",
       "repeatable": true,
-      "component": "project.cards"
+      "component": "project.cards",
+      "max": 3
     }
   }
 }

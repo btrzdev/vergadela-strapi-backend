@@ -1010,6 +1010,7 @@ export interface ApiProjectTypesPageProjectTypesPage extends Schema.SingleType {
     singularName: 'project-types-page';
     pluralName: 'project-types-pages';
     displayName: 'ProjectTypesPage';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1018,7 +1019,13 @@ export interface ApiProjectTypesPageProjectTypesPage extends Schema.SingleType {
     title: Attribute.String;
     subtitle: Attribute.String;
     description: Attribute.Text;
-    cardType: Attribute.Component<'project.cards', true>;
+    cardType: Attribute.Component<'project.cards', true> &
+      Attribute.SetMinMax<
+        {
+          max: 3;
+        },
+        number
+      >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
