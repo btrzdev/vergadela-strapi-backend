@@ -827,6 +827,38 @@ export interface ApiAboutUsAboutUs extends Schema.SingleType {
   };
 }
 
+export interface ApiContactPageContactPage extends Schema.SingleType {
+  collectionName: 'contact_pages';
+  info: {
+    singularName: 'contact-page';
+    pluralName: 'contact-pages';
+    displayName: 'ContactPage';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Attribute.String;
+    titleForm: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::contact-page.contact-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::contact-page.contact-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiFooterFooter extends Schema.SingleType {
   collectionName: 'footers';
   info: {
@@ -1134,6 +1166,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
       'api::about-us.about-us': ApiAboutUsAboutUs;
+      'api::contact-page.contact-page': ApiContactPageContactPage;
       'api::footer.footer': ApiFooterFooter;
       'api::new.new': ApiNewNew;
       'api::news-page.news-page': ApiNewsPageNewsPage;
