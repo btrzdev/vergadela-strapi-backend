@@ -242,10 +242,12 @@ export interface AboutUsPartnerShip extends Schema.Component {
   collectionName: 'components_about_us_partner_ships';
   info: {
     displayName: 'partnerShip';
+    description: '';
   };
   attributes: {
     href: Attribute.String;
     image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    description: Attribute.String;
   };
 }
 
